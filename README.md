@@ -7,7 +7,7 @@ Our dataset comes from [dataset] (https://www.ineltro.ch/media/downloads/SAAItem
 Within this project we 
 
 ## Model Battery Voltage Over time 
-
+ comment: will link the code for each step as well as the image if applicable
 ## Fit the Voltage Curve
 
 ## Compute total energy delivered to the Battery
@@ -15,3 +15,7 @@ Within this project we
 ## Analyze the rate of voltage change at different intervals 
 
 ## Analyze the Energy lost due to resistence
+
+## Introduce Temperature Effects into the model
+
+## Compare Constant Current-Const Voltage (CC-CV)
