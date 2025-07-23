@@ -1,6 +1,6 @@
 # **Modeling and Optimizing a Battery Charging Profile**
 
-This is the work of _Marc Ajay Rajesh, Karthik Chennimalai Ganesh, Louise Marie Maganto, Atanacia Sanchez_ in applying our knowledge of electric circuits, energy transfers, and calculus to model charging behavior and evaulate efficiency in a Lithium Ion battery charging profile.
+This is the work of _Marc Ajay Rajesh, Karthik Chennimalai Ganesh, Louise Marie Maganto, Atanacia Sanchez_ in applying our knowledge of electric circuits, energy transfers, and calculus to model charging behavior and evaluate efficiency in a Lithium Ion battery charging profile.
 Our dataset comes from [dataset](Dataset/Lithium_Ion_Battery.pdf)
 
 
@@ -14,11 +14,11 @@ Within this project we
 
 ## Analyze the Rate of Voltage Change at Different Intervals 
 
-## Analyze the Energy lost due to Resistence
+## Analyze the Energy Lost Due to Resistance
 
 ## Introduce Temperature Effects into the model
 
-## Compare Constant Current-Const Voltage (CC-CV)
+## Compare Constant Current-Constant Voltage (CC-CV)
 
 
 <ins>To see the whole live script of our project make sure to have MatLab downloaded and [click](Code/LiveScript_Matlab_Internship.mlx) </ins>
