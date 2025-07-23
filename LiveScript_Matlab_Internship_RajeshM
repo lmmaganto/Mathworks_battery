@@ -9,13 +9,9 @@ C1 = 1;
 t1 = linspace(0, 10, 1000);  
 V1 = Vmax1 * (1 - exp(-t1 / (R1 * C1)));
 
-% Create plot of t1 and V1
+figure;
+clf;
 h4 = plot(t1,V1,"DisplayName","V1");
-
-% Add xlabel, ylabel, title, and legend
-xlabel("t1")
-ylabel("V1")
-title("V1 vs. t1")
 legend
 grid on
 xlabel("TIme (Hours)")
@@ -202,7 +198,7 @@ end
 Adding Temperature Constraints and Non-Ideal Behaviour
     This section of our project incorporates temperature into the battery charging profile, and shows how a temperature difference can inhibit charging, and cause things like thermal runaway.
     Input a temperature (in Celcius) below, which changes the Temperature-Adjusted Charging Curve
-user_temp_C = -5; 
+user_temp_C = 25; 
 
 if user_temp_C < 0
     warning('Temperature too low! Battery charging may be unsafe or ineffective.');
