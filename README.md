@@ -1,7 +1,7 @@
 # **Modeling and Optimizing a Battery Charging Profile**
 
 This is the work of _Marc Ajay Rajesh, Karthik Chennimalai Ganesh, Louise Marie Maganto, Atanacia Sanchez_ in applying our knowledge of electric circuits, energy transfers, and calculus to model charging behavior and evaulate efficiency in a Lithium Ion battery charging profile.
-Our dataset comes from [dataset] (https://github.com/lmmaganto/Mathworks_battery/blob/main/Dataset/Lithium%20Ion%20Battery.pdf).
+Our dataset comes from [dataset] (Dataset/Lithium Ion Battery.pdf).
 
 
 Within this project we 
