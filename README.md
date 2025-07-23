@@ -10,12 +10,15 @@ Within this project we
  comment: will link the code for each step as well as the image if applicable
 ## Fit the Voltage Curve
 
-## Compute total energy delivered to the Battery
+## Compute Total Energy Delivered to the Battery
 
-## Analyze the rate of voltage change at different intervals 
+## Analyze the Rate of Voltage Change at Different Intervals 
 
-## Analyze the Energy lost due to resistence
+## Analyze the Energy lost due to Resistence
 
 ## Introduce Temperature Effects into the model
 
 ## Compare Constant Current-Const Voltage (CC-CV)
+
+
+<ins>To see the whole live script of our project make sure to have MatLab downloaded and [click](Code/LiveScript_Matlab_Internship.mlx) </ins>
