@@ -1,0 +1,16 @@
+
+%modeling the battery voltage over time
+Vmax1 = 5;    
+R1 = 1;       
+C1 = 1;       
+t1 = linspace(0, 10, 1000);  
+V1 = Vmax1 * (1 - exp(-t1 / (R1 * C1)));
+
+figure;
+clf;
+h4 = plot(t1,V1,"DisplayName","V1");
+legend
+grid on
+xlabel("Time (Hours)")
+ylabel("Voltage (V)")
+title("Simple Battery Charging Curve: Voltage vs. Time")
