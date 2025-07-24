@@ -1,0 +1,14 @@
+%Computing the total energy delivered to the battery
+P = @(t) (Vmax2 * (1 - exp(-t / (R2 * C2)))) .* ((Vmax2 / R2) * exp(-t / (R2 * C2)));
+t_power = linspace(0, 18000, 1000);
+P_vals = P(t_power);
+
+figure;
+plot(t_power, P_vals, 'm-', 'LineWidth', 2);
+xlabel("Time (Seconds)");
+ylabel("Power (W)");
+title("Instantaneous Power vs. Time");
+grid on;
+legend("P(t)");
+E = integral(P, 0, 18000);  
+fprintf('Total energy delivered to the battery: %.2f joules\n', E)
