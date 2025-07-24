@@ -21,4 +21,4 @@ Within this project we
 ## Compare Constant Current-Constant Voltage (CC-CV)
 
 
-<ins>To see the whole live script of our project make sure to have MatLab downloaded and [click](Code/LiveScript_Matlab_Internship.mlx) </ins>
+<ins>To see the whole live script of our project make sure to have MatLab downloaded and click [view raw](Code/LiveScript_Matlab_Internship.mlx) </ins>
