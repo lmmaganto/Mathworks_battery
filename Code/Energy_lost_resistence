@@ -1,0 +1,23 @@
+T_end = 18000;
+RC = 2337;
+I = @(t) (Vmax / R) * exp(-t / RC);
+P_loss = @(t) (I(t)).^2 * R;
+E_loss = integral(P_loss, 0, T_end);
+
+fprintf('\nEnergy lost due to resistance: %.2f joules\n', E_loss);
+
+t = linspace(0, T_end, 1000);
+P_vals = P_loss(t);
+
+% Create plot of selected data
+h7 = plot(t,P_vals,"DisplayName","P_vals");
+
+% Add xlabel, ylabel, title, and legend
+xlabel("t")
+ylabel("P_vals")
+title("P_vals vs. t")
+legend
+title("Power Lost vs. Time")
+grid on
+ylabel("Power Lost (W)")
+xlabel("Time (Seconds)")
