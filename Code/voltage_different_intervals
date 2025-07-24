@@ -1,0 +1,35 @@
+interval_pct = 30;  
+
+Vmax = Vmax2;
+R = R2;
+C = C2;
+t = t2;  
+
+V = Vmax * (1 - exp(-t / (R * C)));
+dVdt = gradient(V, t); 
+
+figure;
+plot(t / 60, dVdt, 'g', 'LineWidth', 2);
+xlabel('Time (minutes)');
+ylabel('dV/dt (V/s)');
+title('Rate of Voltage Change Over Time: Current vs. Time');
+grid on;
+
+num_intervals = floor(100 / interval_pct);
+fprintf('\nAverage dV/dt in %.0f%% intervals:\n', interval_pct);
+for i = 1:num_intervals
+    lower_pct = (i-1) * interval_pct;
+    upper_pct = i * interval_pct;
+    lower_V = Vmax * lower_pct / 100;
+    upper_V = Vmax * upper_pct / 100;
+    
+    mask = (V >= lower_V) & (V < upper_V);
+    if any(mask)
+        avg_dVdt = mean(dVdt(mask));
+    else
+        avg_dVdt = NaN;
+    end
+    
+    fprintf('%2.0f%% - %2.0f%% (%.2fV - %.2fV): %.6f V/s\n', ...
+        lower_pct, upper_pct, lower_V, upper_V, avg_dVdt);
+end
