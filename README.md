@@ -195,7 +195,7 @@ tandem to keep a battery cell fully operational when charging.
 
 **Karthik Chennimalai Ganesh**: Worked on MATLAB optimization as well as integration under power curves. 
 
-**Atanacia Sanchez**: Also helped in creating the GitHub project, formatting energy and power curves.
+**Atanacia Sanchez**: Also helped in creating the GitHub project, readme.md, formatting energy and power curves.
 
 ---
 
