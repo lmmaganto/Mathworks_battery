@@ -27,22 +27,22 @@ All battery parameters — including maximum voltage (Vmax), charge capacity (Qm
 #### `/Code/`
 This folder contains all MATLAB scripts and the Live Script used for modeling and analysis.
 
-- [`LiveScript_Matlab_Internship.mlx`](../Code/LiveScript_Matlab_Internship.mlx): Main Live Script combining all modules for running the full project.
-- [`Model_battery_Voltage`](../Code/Model_battery_Voltage):  
+- [`LiveScript_Matlab_Internship.mlx`](Code/LiveScript_Matlab_Internship.mlx): Main Live Script combining all modules for running the full project.
+- [`Model_battery_Voltage`](Code/Model_battery_Voltage):  
   *Simple RC Charging Curve* — Visualizes voltage response of a basic RC circuit using `V(t) = Vmax(1 - exp(-t/RC))` with user-defined sliders.
-- [`Fitting_Voltage_Curve`](../Code/Fitting_Voltage_Curve):  
+- [`Fitting_Voltage_Curve`](Code/Fitting_Voltage_Curve):  
   *Fitted Curve* — Simulates RC charging to a user-specified charge percentage and computes the time needed to reach it.
-- [`Energy_delivered`](../Code/Energy_delivered):  
+- [`Energy_delivered`](Code/Energy_delivered):  
   *Total Energy Delivered To Battery* — Computes instantaneous power and integrates it over time to calculate total energy in joules.
-- [`voltage_different_intervals`](../Code/voltage_different_intervals):  
+- [`voltage_different_intervals`](Code/voltage_different_intervals):  
   *Rate of Voltage Change* — Computes dV/dt at different intervals of charging and calculates average change in each segment.
-- [`Energy_lost_resistence`](../Code/Energy_lost_resistence):  
+- [`Energy_lost_resistence`](Code/Energy_lost_resistence):  
   *Energy Lost Due to Resistance* — Models resistive losses with `I²R` and integrates to calculate total heat loss over time.
 - `Optimized_RC_Safety.m`:  
   *Optimized Charging With Safety Limits* — Uses optimization (`fmincon`) to find the RC value that minimizes time while keeping current under a safe threshold.
 - `Temp_Adjusted_Charging.m`:  
   *Temperature Constraints* — Adjusts internal resistance based on temperature, recalculates charging profile, and flags unsafe temps.
-- `CC_CV_Comparison.m`:  
+- [`CC_CV_Comparison`](Code/CC_CV_Comparison.m):  
   *CC-CV Comparison* — Compares Constant Current and Constant Voltage charging strategies with time, current, and energy results.
 
 ---
