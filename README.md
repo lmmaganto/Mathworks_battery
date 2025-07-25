@@ -42,7 +42,7 @@ This folder contains all MATLAB scripts and the Live Script used for modeling an
   *Optimized Charging With Safety Limits* — Uses optimization (`fmincon`) to find the RC value that minimizes time while keeping current under a safe threshold.
 - `Temp_Adjusted_Charging.m`:  
   *Temperature Constraints* — Adjusts internal resistance based on temperature, recalculates charging profile, and flags unsafe temps.
-- [`CC_CV_Comparison`](Code/CC_CV_Comparison):  
+- [`CC_CV_Comparison`](Code/CC_CV_Comparisons):  
   *CC-CV Comparison* — Compares Constant Current and Constant Voltage charging strategies with time, current, and energy results.
 
 ---
