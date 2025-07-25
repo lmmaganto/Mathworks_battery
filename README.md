@@ -38,9 +38,9 @@ This folder contains all MATLAB scripts and the Live Script used for modeling an
   *Rate of Voltage Change* — Computes dV/dt at different intervals of charging and calculates average change in each segment.
 - [`Energy_lost_resistence`](Code/Energy_lost_resistence):  
   *Energy Lost Due to Resistance* — Models resistive losses with `I²R` and integrates to calculate total heat loss over time.
-- `Optimized_RC_Safety.m`:  
+- [`Optimized_RC_Safety`](Code/Optimized_RC_Safety):
   *Optimized Charging With Safety Limits* — Uses optimization (`fmincon`) to find the RC value that minimizes time while keeping current under a safe threshold.
-- `Temp_Adjusted_Charging.m`:  
+- [`Temp_Adjusted_Charging`](Code/Temp_Adjusted_Charging):  
   *Temperature Constraints* — Adjusts internal resistance based on temperature, recalculates charging profile, and flags unsafe temps.
 - [`CC_CV_Comparison`](Code/CC_CV_Comparisons):  
   *CC-CV Comparison* — Compares Constant Current and Constant Voltage charging strategies with time, current, and energy results.
