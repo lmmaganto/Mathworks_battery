@@ -55,7 +55,7 @@ This folder contains all MATLAB scripts and the Live Script used for modeling an
 #### `/Media/`
 Contains all visual output from the code as JPG figures:
 
-- [`Figure_1.jpg`](../Media/Figure_1.jpg) – General project diagram 
+- [`Simple Battery Charing Curve.jpg`](../Media/Simple_Battery_Charging_Curve.jpg) – General project diagram 
 - [`Power_lost_over_time.jpg`](../Media/Power_lost_over_time.jpg) – Estimated power loss due to resistance 
 - [`Power_vs_Time.jpg`](../Media/Power_vs_Time.jpg) – Power delivered to battery over time
 -  [`RC_Battery.jpg`](../Media/RC_Battery.jpg) – Standard RC charging curve
