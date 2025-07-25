@@ -190,8 +190,11 @@ tandem to keep a battery cell fully operational when charging.
 ###  Contributions
 
 **Marc Ajay Rajesh**: Worked on MATLAB advanced temperature analysis and facilitated team meetings.
+
 **Louise Marie Maganto**: Provided framework for GitHub and worked on dv/dt voltage intervals. 
+
 **Karthik Chennimalai Ganesh**: Worked on MATLAB optimization as well as integration under power curves. 
+
 **Atanacia Sanchez**: Also helped in creating the GitHub project, formatting energy and power curves.
 
 ---
