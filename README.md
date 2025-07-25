@@ -58,9 +58,12 @@ Contains all visual output from the code as JPG figures:
 - [`Simple Battery Charing Curve.jpg`](../Media/Simple_Battery_Charging_Curve.jpg) – General project diagram 
 - [`Power_lost_over_time.jpg`](../Media/Power_lost_over_time.jpg) – Estimated power loss due to resistance 
 - [`Power_vs_Time.jpg`](../Media/Power_vs_Time.jpg) – Power delivered to battery over time
--  [`RC_Battery.jpg`](../Media/RC_Battery.jpg) – Standard RC charging curve
+- [`RC_Battery.jpg`](../Media/RC_Battery.jpg) – Standard RC charging curve
 - [`RC_Battery_100.jpg`](../Media/RC_Battery_100.jpg) – RC curve to 100% charge
 - [`current_vs_time.jpg`](../Media/current_vs_time.jpg) – Current over time in RC charging
+- [`Voltage_vs_Time_for_Choosen_R_and_RC0.png`](../Media/Voltage_vs_Time_for_Choosen_R_and_RC0.png)-user-defined resistance (R) and time constant (RC0)
+- [`Temp_Adjusted_Charging_Curve_at_25.png`](../Media/Temp_Adjusted_Charging_Curve_at_25.png)- how temperature affects resistance and charge time
+- [`CC_vs_CV.png`](../Media/CC_vs_CV.png)-comparing CC (constant current) and CV (constant voltage) charging
   
 ---
 
@@ -92,10 +95,11 @@ capacitance (C1). These inputs are intended to be controlled via sliders in an i
 voltage is calculated using the standard charging equation V(t)=Vmax(1-e-t/RC), and the simulation time
 spans from 0 to 10 hours. The computed voltage values are plotted as a smooth curve, showing how the
 voltage rises and asymptotically approaches Vmax1 over time, depending on the RC time constant. The
-resulting plot includes labeled axes, a title, a legend, and a grid for readability. This [visualization](Media/Figure_1.jpg) provides
+resulting plot includes labeled axes, a title, a legend, and a grid for readability. This [visualization](Media/Simple_Battery_Charging_Curve.jpg) provides
 a clear and interactive way to understand how RC circuits behave during the charging process.
 
-![`Figure_1.jpg`](Media/Figure_1.jpg)
+![Simple Battery Charging Curve](Media/Simple_Battery_Charging_Curve.jpg)
+
 #### Fitted Curve
 The next portion of code simulates and visualizes the voltage curve of a lithium battery charging through
 an RC circuit, allowing users to select a target charge percentage (desired_pct) via a slider. The battery
@@ -107,6 +111,10 @@ charging curve and highlights the point in time where the battery reaches the de
 labels, a title, grid lines, and a dynamic legend provide a clear and informative visualization. This block is
 ideal for demonstrating how charging time varies with different target charge levels in lithium-ion battery
 systems.
+
+![RC Battery](Media/RC_Battery.jpg)
+![RC Battery at 100 Percent](Media/RC_Battery_100.jpg)
+
 #### Total Energy Delivered To Battery
 Our next block calculates and visualizes the instantaneous power delivered to a battery during RC
 charging over time. It defines a power function P(t) as the product of voltage and current in an RC circuit,
@@ -116,6 +124,8 @@ The graph includes labeled axes, a title, grid, and legend for clarity. Addition
 total energy delivered to the battery by integrating the power function over the full charging period and
 outputs the result in joules. This block provides insight into the dynamic power behavior and energy
 transfer during RC-based battery charging.
+![Instanteour Power vs Time](Media/Instanteous_Power_vs_Time.jpg)
+
 #### Rate of Voltage Change
 This code analyzes the rate of voltage change (dV/dt) during RC battery charging and breaks it down into
 user-defined voltage intervals, controlled by a percentage slider (interval_pct). It computes the voltage
@@ -125,6 +135,9 @@ range (0%–100% of Vmax) into equal intervals and calculates the average dV/dt 
 averages are printed to the console, offering insight into how charging speed varies across different
 voltage levels. This block is useful for understanding current behavior and efficiency throughout the
 charge cycle.
+
+![Rate of Voltage Change over Time](Media/Rate_of_Voltage_Change_over_time_(current_vs_time).jpg)
+
 #### Energy Lost Due to Resistance
 The next section of code calculates and visualizes the power lost due to internal resistance during the
 charging of an RC battery. It defines the time-dependent current I(t) and computes power loss as
@@ -132,6 +145,9 @@ P(t)=I(t)^2*R, representing resistive heating. The total energy lost over the en
 (T_end) is calculated using numerical integration and printed in joules. A plot is then generated showing
 how resistive power loss decreases over time, with labeled axes, a title, legend, and grid for clarity. This
 block provides a clear view of inefficiencies in the charging process due to resistive losses in the circuit.
+
+![Power Lost over Time](Media/Power_lost_over_time.jpg)
+
 #### Optimized Charging With Safety Limits
 After that, the next block of code simulates RC battery charging and evaluates how optimal a
 user-selected time constant (RC0) is for reaching 90% of the maximum voltage (Vmax). Using adjustable
@@ -141,6 +157,9 @@ value that minimizes time to reach 90% charge, then compares it to the user's RC
 The resulting plot shows voltage vs. time, and printed feedback informs whether RC0 is near-optimal, too
 high (slow charging), or too low (potentially unsafe). This block helps users balance fast charging and
 battery protection through interactive parameter tuning.
+
+![Chosen R and RC0](Media/Voltage_vs_Time_for_Chosen_R_and_RC0.png)
+
 #### Temperature Constraints
 To add to our previous block, our next section models the impact of temperature on lithium-ion battery
 charging by adjusting internal resistance based on the user's input temperature (user_temp_C). It issues
@@ -150,6 +169,9 @@ capacitance and simulates the charging voltage over time. The resulting plot sho
 affects the charging curve, while console output reports the adjusted resistance, initial charging current,
 and time constant. This helps visualize and quantify temperature-related non-ideal behavior in our
 lithium-ion battery charging model.
+
+![Temperature Constraints](Media/Temp_Adjusted_Charging_Curve_at_25.png)
+
 #### CC-CV Comparison
 Finally, our last section compares constant current (CC) and constant voltage (CV) charging methods for a
 lithium-ion battery. It calculates voltage and current profiles over time for both methods, ensuring the
@@ -159,6 +181,9 @@ with charging ending when current drops to a threshold value. The code then plot
 over time for both methods and prints out total charging time and energy consumption for each. This
 allows for a visual and quantitative comparison of the two charging strategies, both of which work in
 tandem to keep a battery cell fully operational when charging.
+
+![CC and CV Comparison](Media/CC_vs_CV.png)
+
 
 ---
 
